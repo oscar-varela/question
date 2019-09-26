@@ -12,4 +12,10 @@ public class ChoiseQuestion extends Question
         {super.setAnswer(String.valueOf(choiseNumer));
         }
     }
+    
+    public void display()
+    {   
+        super.display();
+        System.out.println("Dysplaying choices... ");
+    }
 }

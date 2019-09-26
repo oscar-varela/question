@@ -4,13 +4,17 @@ public class Main{
     
     public static void main(String args[]){
         Scanner input = new Scanner(System.in);
-        Question q = new Question();
-        q.setText("Quien fue el creador de java?");
-        q.setAnswer("James");
+        ChoiseQuestion choiseQuestion = new ChoiseQuestion();
+       
+        choiseQuestion.setText("what was the oeriginal name?");
+        choiseQuestion.addChoise("*7",false);
+        choiseQuestion.addChoise("Duke",false);
+        choiseQuestion.addChoise("Oak",true);
+        choiseQuestion.addChoise("Gosling",false);
         
-        q.display();
+        choiseQuestion.display();
         System.out.println("Your answer: ");
         String response = input.nextLine();
-        System.out.println(q.checkAnswer(response));
+        System.out.println(choiseQuestion.checkAnswer(response));
     }
 }
