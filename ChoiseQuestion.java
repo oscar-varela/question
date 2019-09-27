@@ -2,20 +2,17 @@ import java.util.LinkedList;
 
 public class ChoiseQuestion extends Question
 {
-   private int choiseNumer;
    private LinkedList<String> choises;
     public ChoiseQuestion()
     {
-     choiseNumer = 0;
      choises = new LinkedList<>();
     }
     
     public void addChoise(String choise , boolean correct)
     {   this.choises.add(choise);
-        choiseNumer++;
         if(correct)
         {
-            super.setAnswer(String.valueOf(choiseNumer));
+            super.setAnswer(String.valueOf(choises.size()));
         }
     }
     
